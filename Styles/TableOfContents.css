@@ -1,7 +1,7 @@
 .TableOfContents {  
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     width: 25%;
     padding: 20px 40px;
     box-sizing: border-box;
@@ -58,7 +58,7 @@
 }
 
 @media (max-width:1250px) {
-    .Title{
-        width: 90%
+    .TableOfContents{
+        width: 60%
     }
 }

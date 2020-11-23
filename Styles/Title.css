@@ -15,3 +15,9 @@
     border-style: dashed;
     border-width: 2px;
 }
+
+@media (max-width:1250px) {
+    .Title{
+        width: 90%
+    }
+}
