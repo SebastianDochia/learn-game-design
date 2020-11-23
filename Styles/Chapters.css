@@ -1,0 +1,17 @@
+.Chapters {
+    margin: auto;
+    margin-top: 20px;
+    width: 45%;
+    text-align: center;
+    align-items: center;
+    background-color: antiquewhite;
+    box-shadow: 0 2px 1px #ccc;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+@media (max-width:1250px) {
+    .GenericBlock{
+        width: 80%
+    }
+}
