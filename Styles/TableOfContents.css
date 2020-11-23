@@ -1,0 +1,70 @@
+div.Title {
+    margin: auto;
+    margin-top: 60px;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    background-color: antiquewhite;
+    box-shadow: 0 2px 1px #ccc;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+div.Title h1{
+    font-size: 60px;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+div.TableOfContents {  
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 25%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+div.TableOfContents .Header {
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: antiquewhite;
+    box-shadow: 0 2px 1px #ccc;
+    padding: 0px 10px;
+}
+
+div.TableOfContents p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+div.TableOfContents button {
+    margin-left: 10px;
+    margin-right: 5px;
+    background-color: antiquewhite;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+div.ContentsOfTable {
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: antiquewhite;
+    box-shadow: 0 2px 1px #ccc;
+}
+
+div.ContentsOfTable li {
+    margin-top: 10px;
+    size: 15px;
+}
+
+@media (max-width:1250px) {
+    div.Title{
+        width: 90%
+    }
+}
