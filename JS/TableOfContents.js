@@ -4,6 +4,4 @@ makeContentsVisible = () => {
     }else {
         document.getElementById('CoT').style.display= "block";
     }
-    
-    //document.getElementById('Toc').classList.add('animate');
 }
