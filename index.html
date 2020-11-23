@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./Styles/TableOfContents.css">
+    <link rel="stylesheet" href="./Styles/Title.css">
+
+    <script src="./JS/TableOfContents.js"></script>
     <title>Learn Game Design</title>
 </head>
+
 <body>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
+    <!--Title Card-->
     <div class="Title">
         <h1>GAME DESIGN</h1>
-        <p>Get started with the basics of game design. Learn everything you need to get started with the adventure that is game making. Get a grasp on what makes a game fun and how to keep the player enganged for long periods of time.</p>
-        <p><i><q>Anyone can learn how to write code that lets you swing a sword. The real challange is to make that action feel enjoyable and entertaining.</q></i> ~ Scott Rogers</p>
+        <p>Get started with the basics of game design. Learn everything you need to get started with the adventure that
+            is game making. Get a grasp on what makes a game fun and how to keep the player enganged for long periods of
+            time.</p>
+        <p><i><q>Anyone can learn how to write code that lets you swing a sword. The real challange is to make that
+                    action feel enjoyable and entertaining.</q></i> ~ Scott Rogers</p>
     </div>
-    <div >
-        <div class="TableOfContents">
-            <div class="Header">
-                <button onClick={this.toggleComponentsHandler}>+</button>
-                <p>Table of Contents</p>
-            </div>
-            <div class="ContentsOfTable">
-                <ul>
-                    <li><a href='#Title1'>Title1</a></li>
-                    <li><a href='#'>Title2</a></li>
-                    <li><a href='#'>Title3</a></li>
-                    <li><a href='#'>Title4</a></li>
-                    <li><a href='#'>Title5</a></li>
-                </ul>
-            </div>
+    <!--Table of Contents Card-->
+    <div class="TableOfContents">
+        <div onclick="makeContentsVisible()" class="Header">
+            <p class="Plus">+
+            <p>
+            <p class="Text">Table of Contents</p>
+        </div>
+        <div id="CoT" class="ContentsOfTable">
+            <a draggable="false" href='#Title1'>Title1</a>
+            <a draggable="false" href='#Title2'>Title2</a>
+            <a draggable="false" href='#'>Title3</a>
+            <a draggable="false" href='#'>Title4</a>
+            <a draggable="false" href='#'>Title5</a>
         </div>
     </div>
-    
+    <!--Chapter Cards-->
+    <div>
+
+    </div>
 </body>
+
 </html>

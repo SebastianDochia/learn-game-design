@@ -1,31 +1,14 @@
-div.Title {
-    margin: auto;
-    margin-top: 60px;
-    width: 50%;
-    text-align: center;
-    align-items: center;
-    background-color: antiquewhite;
-    box-shadow: 0 2px 1px #ccc;
-    padding: 10px 40px;
-    box-sizing: border-box;
-}
-
-div.Title h1{
-    font-size: 60px;
-    border-style: dashed;
-    border-width: 2px;
-}
-
-div.TableOfContents {  
+.TableOfContents {  
     margin: auto;
     margin-top: 20px;
     margin-bottom: 25px;
     width: 25%;
     padding: 20px 40px;
     box-sizing: border-box;
+    user-select: none;
 }
 
-div.TableOfContents .Header {
+.TableOfContents .Header {
     display: flex;
     flex-flow: row;
     text-align: center;
@@ -34,37 +17,48 @@ div.TableOfContents .Header {
     background-color: antiquewhite;
     box-shadow: 0 2px 1px #ccc;
     padding: 0px 10px;
+    cursor: pointer;
 }
 
-div.TableOfContents p {
+.TableOfContents p {
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
 }
 
-div.TableOfContents button {
+.TableOfContents p.Text {
+    margin-left: 10px;
+}
+
+.TableOfContents p.Plus {
     margin-left: 10px;
     margin-right: 5px;
     background-color: antiquewhite;
     width: 25px;
     height: 25px;
-    cursor: pointer;
+    border-style: dashed;
 }
 
-div.ContentsOfTable {
+.ContentsOfTable {
     margin-top: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: antiquewhite;
     box-shadow: 0 2px 1px #ccc;
+    box-sizing: border-box;
+    display: none;
 }
 
-div.ContentsOfTable li {
+.ContentsOfTable a {
     margin-top: 10px;
-    size: 15px;
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color: #818181;
 }
 
 @media (max-width:1250px) {
-    div.Title{
+    .Title{
         width: 90%
     }
 }
