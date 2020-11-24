@@ -2,12 +2,21 @@
     margin: auto;
     margin-top: 20px;
     width: 45%;
-    text-align: center;
-    align-items: center;
     background-color: antiquewhite;
     box-shadow: 0 2px 1px #ccc;
     padding: 10px 40px;
     box-sizing: border-box;
+}
+
+.Chapters img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+}
+
+.Chapters h2 {
+    text-align: center;
 }
 
 @media (max-width:1250px) {
