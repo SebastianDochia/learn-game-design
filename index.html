@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="./Styles/Chapters.css">
 
     <script src="./JS/TableOfContents.js"></script>
+    <script src="JS/SlideShow.js"></script>
     <title>Learn Game Design</title>
 </head>
 
-<body>
+<body onload="currentSlide(1)">
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
@@ -74,9 +75,10 @@
                 <li>Play a game, preferably a bad one. </li>
                 <li>Regardless of the above, follow your passion. </li>
             </ul>
-            <img src="resources/carefreeGuy.png"/>
-            <p style="text-align: center;"><q><i>If you think something is innovative, it just means you haven ’ t been paying
-                attention. </i></q> ~ Scott Rogers </p>
+            <img src="resources/carefreeGuy.png" />
+            <p style="text-align: center;"><q><i>If you think something is innovative, it just means you haven ’ t been
+                        paying
+                        attention. </i></q> ~ Scott Rogers </p>
             <p>While I am sure there is probably still a completely original idea out there in
                 the galaxy of ideas, the majority of gameplay design works by each game
                 building upon its predecessor. I truly believe that this strategy is one of the
@@ -102,22 +104,147 @@
                 chewing that over, let ’ s look at the classical definition of “ story ” as taught
                 by everyone from Aristotle to very famous screenwriters. Here ’ s the most
                 basic structure of a story:</p>
-                <!--Slideshow-->
-                <div>
-
+            <!--Slideshow-->
+            <div class="SlideshowContainer">
+                <div class="Slide Fade fade">
+                    <div class="NumberText">1 / 8</div>
+                    <img src="resources/storySlide1.png" />
+                    <div class="Text">First, there is a hero who has a desire.</div>
                 </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">2 / 8</div>
+                    <img src="resources/storySlide2.png" />
+                    <div class="Text">Our hero encounters an event that throws his life into disarray. </div>
+                </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">3 / 8</div>
+                    <img src="resources/storySlide3.png" />
+                    <div class="Text">The hero tries to overcome the problem … </div>
+                </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">4 / 8</div>
+                    <img src="resources/storySlide4.png" />
+                    <div class="Text">… but his method fails. </div>
+                </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">5 / 8</div>
+                    <img src="resources/storySlide5.png" />
+                    <div class="Text">There is a reversal of fortune, which causes more trouble for the hero.</div>
+                </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">6 / 8</div>
+                    <img src="resources/storySlide6.png" />
+                    <div class="Text">An even greater problem is created for the hero that puts the hero at
+                        greater risk. </div>
+                </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">7 / 8</div>
+                    <img src="resources/storySlide7.png" />
+                    <div class="Text">Finally, there is one last problem that threatens the hero with the most
+                        risk of all. </div>
+                </div>
+                <div class="Slide Fade fade">
+                    <div class="NumberText">8 / 8</div>
+                    <img src="resources/storySlide8.png" />
+                    <div class="Text">The hero must resolve the fi nal problem… </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+            </div>
+            <p>Remember that no matter what your story is about, a story
+                ALWAYS has a beginning, middle, and end. Hollywood
+                has spent many years analyzing and deconstructing the
+                story. Don’t feel like you have to reinvent the wheel; learn
+                what they have. Read screenwriting books, take classes,
+                visit screenwriting websites. But you don’t have to feel
+                chained to a standard story structure like Joseph
+                Campbell’s “Hero’s Journey” or Syd Field’s “Three Act Structure.” Try
+                using another medium’s structures to tell your story. How is a story told
+                in a song? In a TV news report? In a Homeric poem? Or try looking to
+                non - Western - world storytelling for inspiration. </p>
+            <p>Just remember that video games are an interactive medium, and as William
+                Shakespeare reminds us, “The play’s the thing.” That was one guy who
+                knew story, and he was pretty smart for someone who never played a video
+                game. If gameplay is the meat of the game, then story should be the salt:
+                just enough will add flavor but too much can ruin everything and kill you. </p>
+            <p>Monty Python and the Holy Grail features typical (if not archetypical)
+                characters: King Arthur and his knights of the round table. These stalwart
+                knights travel through medieval England on their quest for the Holy Grail.
+                However, that quest is filled with weird activities like designing shrubs for
+                the knights that say “Ni!” or being slaughtered by the killer rabbit of
+                Caerbannog. </p>
+            <img src="resources/mpathg.png" />
         </div>
-        <div class="Chapters">
-            <h2>Title3</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <div class="3.Chapters">
+            <h2>Characters</h2>
+            <p style="text-align: center;"><strong>FORM FOLLOWS FUNCTION</strong></p>
+            <p>Let this rule be your motto when designing anything. It will come into play
+                more importantly later on in the book, but should be your guide especially
+                when designing your game character. There are several great books on how to design a character visually
+                , so I won’t go into great detail about this, but
+                let me pass on some of the high level things to keep in mind. </p>
+            <p>As you are creating your character, you want to think about his or her
+                personality. What are the three personality traits that you would use to
+                describe your hero?</p>
+            <ul>
+                <li><strong>Mario:</strong> courageous, bouncy, happy </li>
+                <li><strong>Sonic:</strong> fast, cool, edgy</li>
+                <li><strong>Kratos:</strong> brutal, vicious, selfish </li>
+            </ul>
+            <p>Another old trick that all professional character designers and animators use
+                is the silhouette. A strong, clear silhouette of a character is important for
+                many reasons: </p>
+            <ul>
+                <li>Tells us the character ’ s personality at a glance. </li>
+                <li>Helps distinguish one character from another. </li>
+                <li>Identifi es “ friendly ” or “ enemy ” characters. </li>
+                <li>Helps the character stand out against background and world elements. </li>
+            </ul>
+            <p>For example, let ’ s look at the silhouettes of the player characters of Team
+                Fortress 2. </p>
+            <img src="resources/tf2.png"/>
+            <p>Due to their unique silhouettes, you can immediately distinguish one
+                character from another. In the image above, the Heavy is clearly
+                distinguished from the Pyro from the Spy. Body language plays a huge part
+                in creating unique personalities. Not only does their silhouette give you a
+                snapshot of their personality, but it provides the player with a quick way to
+                recognize the character. This is important during gameplay so you know
+                who is gunning for you and can adjust your strategy — or more importantly,
+                who is in your sights. Boom. Headshot. </p>
         </div>
         <div class="Chapters">
             <h2>Title4</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+                qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </div>
         <div class="Chapters">
             <h2>Title5</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+                qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </div>
     </div>
 </body>
