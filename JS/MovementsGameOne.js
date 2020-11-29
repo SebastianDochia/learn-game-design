@@ -1,6 +1,10 @@
 let ctx;
+let raf;
+let canvas;
 let moveX = 0;
 let moveY = 0;
+let x = 20;
+let y = 10;
 const maxMoveX = 1.5;
 const maxMoveY = 3;
 const moveSpeed = 0.3;
@@ -8,71 +12,90 @@ const gravity = 0.05;
 const friction = 0.95;
 const jumpStrenght = 7.5;
 let grounded = false;
-let keys = {"ArrowLeft": false, "ArrowRight": false, " ": false};
-let x=20;
-let y=10;
+let keys = { 'ArrowLeft': false, 'ArrowRight': false, ' ': false };
 
 document.addEventListener('DOMContentLoaded', () => {
-    ctx = document.getElementById('movementsGameOneCanvas').getContext('2d');
-    startGame();
-});
+    //getting the canvas and context after the DOM has loaded
+    canvas = document.getElementById('movementsGameOneCanvas');
+    ctx = canvas.getContext('2d');
 
-document.addEventListener("keydown", function (e) {
-    keys[e.key] = true;
-});
-document.addEventListener("keyup", function (e) {
-    keys[e.key] = false;
-});
+    //drawing the initial image
+    drawBG();
+    drawRED();
 
-const startGame = () => {
-    draw();
-}
+    //adding events
+    canvas.addEventListener('mouseenter', () => {
+        //calling the first render
+        raf = window.requestAnimationFrame(draw);
+        document.addEventListener('keydown', keyDown);
+        document.addEventListener('keyup', keyUp);
+    });
+
+    //removing events
+    canvas.addEventListener('mouseleave', () => {
+        window.cancelAnimationFrame(raf);
+        document.removeEventListener('keydown', keyDown);
+        document.removeEventListener('keyup', keyUp);
+
+        //making sure no keys remain pressed after we remove the listners
+        for(let key in keys){
+            keys[key] = false;
+        }
+    });
+});
 
 const draw = () => {
-    requestAnimationFrame(draw);
-    
+    //calling next render
+    raf = requestAnimationFrame(draw);
+
+    //preparing canvas for next render
     ctx.save();
     ctx.clearRect(0, 0, 1200, 300);
 
-    if(x > 300 && x < 900) {
+    //adjusting camera
+    if (x > 300 && x < 900) {
         ctx.translate(300 - x, 0);
-    } else if (x > 900){
+    } else if (x > 900) {
         ctx.translate(-600, 0);
     }
 
+    //drawing all the elements
     drawBG();
+    drawRED();
 
-    ctx.fillStyle = 'red';
-    ctx.fillRect(x, y, 50, 50);
-    
-
-    if (keys["ArrowRight"]) {
+    //detecting player movement and adjusting velocity
+    if (keys['ArrowRight']) {
         if (moveX < maxMoveX) {
             moveX += moveSpeed;
         }
     }
-    if (keys["ArrowLeft"]) {
+    if (keys['ArrowLeft']) {
         if (moveX > -maxMoveX) {
             moveX -= moveSpeed;
         }
     }
-    if (keys[" "] && grounded) {
+    if (keys[' '] && grounded) {
         if (moveY > -maxMoveY) {
             moveY -= jumpStrenght;
             grounded = false;
         }
     }
 
+    //setting the next position of RED based on velocity
     x += moveX;
     y += moveY;
 
-    if(grounded) {
+    //detecting what force should be applied next frame
+    if (grounded) {
         moveX *= friction;
     } else {
         moveY += gravity;
     }
-    
+
+    //chcking for collision
     checkCollisions();
+
+    //going beck to the initioal canvas
     ctx.restore();
 }
 
@@ -99,6 +122,15 @@ const checkWallRight = () => {
     if (x > 1150) {
         x = 1150;
     }
+}
+
+let keyDown = (e) => {
+    keys[e.key] = true;
+    e.preventDefault();
+}
+
+let keyUp = (e) => {
+    keys[e.key] = false;
 }
 
 const drawBG = () => {
@@ -131,3 +163,7 @@ const drawBG = () => {
     ctx.stroke();
 }
 
+const drawRED = () => {
+    ctx.fillStyle = 'red';
+    ctx.fillRect(x, y, 50, 50);
+}
