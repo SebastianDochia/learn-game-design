@@ -15,14 +15,10 @@
     <link rel="stylesheet" href="./Styles/Title.css">
     <link rel="stylesheet" href="./Styles/Chapters.css">
     <link rel="stylesheet" href="./Styles/Games.css">
-
-    <script src="./JS/TableOfContents.js"></script>
-    <script src="JS/SlideShow.js"></script>
-    <script src="JS/MovementsGameOne.js"></script>
     <title>Learn Game Design</title>
 </head>
 
-<body onload="currentSlide(1); startGame()">
+<body>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
@@ -38,8 +34,7 @@
     <!--Table of Contents Card-->
     <div class="TableOfContents">
         <div onclick="makeContentsVisible()" class="Header">
-            <p class="Plus">+
-            <p>
+            <p class="Plus">+<p>
             <p class="Text">Table of Contents</p>
         </div>
         <div id="CoT" class="ContentsOfTable">
@@ -242,7 +237,7 @@
                 “and then the character walks through here” , this should set off very loud
                 klaxons.</p>
             <div class="Game">
-                <canvas id="movementsGameOneCanvas" width="600px" height="300" style="border:1px solid #000000;">
+                <canvas id="movementsGameOneCanvas" width="600" height="300" style="border:1px solid #000000;">
                     Not supported on this device!
                 </canvas>
             </div>
@@ -260,6 +255,10 @@
                 qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </div>
     </div>
+
+    <script src="./JS/TableOfContents.js"></script>
+    <script src="JS/SlideShow.js"></script>
+    <script src="JS/MovementsGameOne.js"></script>
 </body>
 
 </html>
