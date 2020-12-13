@@ -12,7 +12,7 @@ const gravity = 0.05;
 const friction = 0.95;
 const jumpStrenght = 7.5;
 let grounded = false;
-let keys = { 'ArrowLeft': false, 'ArrowRight': false, ' ': false };
+let keys = { ArrowLeft: false, ArrowRight: false, ' ': false };
 
 document.addEventListener('DOMContentLoaded', () => {
     //getting the canvas and context after the DOM has loaded
@@ -33,12 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //removing events
     canvas.addEventListener('mouseleave', () => {
+        //stop the game when mouse leaves the canvas
         window.cancelAnimationFrame(raf);
         document.removeEventListener('keydown', keyDown);
         document.removeEventListener('keyup', keyUp);
 
         //making sure no keys remain pressed after we remove the listners
-        for(let key in keys){
+        for (let key in keys) {
             keys[key] = false;
         }
     });
@@ -97,41 +98,41 @@ const draw = () => {
 
     //going beck to the initioal canvas
     ctx.restore();
-}
+};
 
 const checkCollisions = () => {
     checkFloor();
     checkWallLeft();
     checkWallRight();
-}
+};
 
 const checkFloor = () => {
     if (y > 151) {
         y = 151;
         grounded = true;
     }
-}
+};
 
 const checkWallLeft = () => {
     if (x < 0) {
         x = 0;
     }
-}
+};
 
 const checkWallRight = () => {
     if (x > 1150) {
         x = 1150;
     }
-}
+};
 
 let keyDown = (e) => {
     keys[e.key] = true;
     e.preventDefault();
-}
+};
 
 let keyUp = (e) => {
     keys[e.key] = false;
-}
+};
 
 const drawBG = () => {
     ctx.fillStyle = 'white';
@@ -161,9 +162,9 @@ const drawBG = () => {
     ctx.moveTo(890, 200);
     ctx.lineTo(900, 145);
     ctx.stroke();
-}
+};
 
 const drawRED = () => {
     ctx.fillStyle = 'red';
     ctx.fillRect(x, y, 50, 50);
-}
+};
