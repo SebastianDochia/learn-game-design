@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.cancelAnimationFrame(raf);
         document.removeEventListener('keydown', keyDown);
         document.removeEventListener('keyup', keyUp);
-
         //making sure no keys remain pressed after we remove the listners
         for (let key in keys) {
             keys[key] = false;
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const draw = () => {
     //calling next render
     raf = requestAnimationFrame(draw);
-
     //preparing canvas for next render
     ctx.save();
     ctx.clearRect(0, 0, 1200, 300);
