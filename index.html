@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content='#faebd7'>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -15,6 +16,8 @@
     <link rel="stylesheet" href="./Styles/Title.css">
     <link rel="stylesheet" href="./Styles/Chapters.css">
     <link rel="stylesheet" href="./Styles/Games.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="resources/TBSsmall.png">
     <title>Learn Game Design</title>
 </head>
 
@@ -237,7 +240,7 @@
                 “and then the character walks through here” , this should set off very loud
                 klaxons.</p>
             <div class="Game">
-                <canvas id="movementsGameOneCanvas" width="600" height="300" style="border:1px solid #000000;">
+                <canvas id="movementsGameOneCanvas" width="600" height="300" class="GameCanvas">
                     Not supported on this device!
                 </canvas>
             </div>
@@ -263,6 +266,7 @@
     <script src="JS/SlideShow.js"></script>
     <script src="JS/MovementsGameOne.js"></script>
     <script src="JS/TurnBasedGame.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
