@@ -18,10 +18,15 @@
     <title>Learn Game Design</title>
 </head>
 
-<body>
+<body onload="FunctieGL(1);">
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
+    <canvas id="WebGLBackground" width="1024px" height="1024px">
+        Your Browser does not support HTML 5 :^(
+    </canvas>
+    <script> var DarkModeEnabled = 1;
+    </script>
     <!--Title Card-->
     <div class="Title">
         <h1>GAME DESIGN</h1>
@@ -30,6 +35,17 @@
             time.</p>
         <p><i><q>Anyone can learn how to write code that lets you swing a sword. The real challange is to make that
                     action feel enjoyable and entertaining.</q></i> ~ Scott Rogers</p>
+    <button onclick="ScriptDarkMode();"> Switch to darkmode!
+    </button>
+    <script>
+        function ScriptDarkMode(){
+       
+        
+        DarkModeEnabled = 1 - DarkModeEnabled;
+        FunctieGL(DarkModeEnabled);
+        console.log(DarkModeEnabled);
+    }
+    </script>                
     </div>
     <!--Table of Contents Card-->
     <div class="TableOfContents">
@@ -259,6 +275,7 @@
     <script src="./JS/TableOfContents.js"></script>
     <script src="JS/SlideShow.js"></script>
     <script src="JS/MovementsGameOne.js"></script>
+    <script src="JS/WebGLBackground.js"></script>
 </body>
 
 </html>
