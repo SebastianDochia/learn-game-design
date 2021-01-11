@@ -2,3 +2,9 @@
     margin: auto;
     width: 600px;
 }
+
+@media (max-width:760px) {
+    .Game{
+        visibility: hidden
+    }
+}
