@@ -12,8 +12,37 @@ body {
   z-index: -100;
   height: 100%;
   width: 100%;
-} 
+}
+.flyingpig {
+  fill: pink;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  animation-name: flyingpigs;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  right: 0%;
+}
 
-#webGLBackground{
-  
+.flyingpig:hover {
+  fill: plum;
+}
+
+@keyframes flyingpigs {
+  0%{
+    top:5px;
+  }
+  25%{
+    top:100px;
+  }
+  50%{
+    top:80px;
+  }
+  75%{
+    top:20px;
+  }
+  100%{
+    right: -80%;
+    top:102px;
+  }
 }
